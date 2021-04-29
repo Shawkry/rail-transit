@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0ddc4a"],{8392:function(e,n,t){"use strict";t.r(n);var c=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("line-predict")},a=[],i=t("0a7b"),l={name:"linePredictPag",components:{linePredict:i["a"]}},r=l,u=t("2877"),d=Object(u["a"])(r,c,a,!1,null,null,null);n["default"]=d.exports}}]);
+//# sourceMappingURL=chunk-2d0ddc4a.0d9b3372.js.map
