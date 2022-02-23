@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="wrapper">
-    <router-link to="/Home/Mappage" class="button">进入平台</router-link>
-  </div>
+      <router-link to="/Home/Mappage" class="button">进入平台</router-link>
+    </div>
     <canvas id="cvs"></canvas>
     <div class="input-container" style="display: none">
       <div class="input-content">
@@ -178,7 +178,7 @@ export default {
             this.toAlpha = alpha;
             this.toX = x;
             this.toY = y;
-            if(g==false){  //粒子运动停止
+            if (g == false) {  //粒子运动停止
               this.random = 0;
             }
           }
@@ -192,7 +192,7 @@ export default {
       /* 粒子文本 */
       class ParticleText {
         particles = []; // 所有粒子
-        text = ["轨道交通","大数据挖掘",'LSTM预测','SpringBoot','Vue+Echarts',]; // 文字轮播队列
+        text = ["轨道交通", "大数据挖掘", 'LSTM预测', 'SpringBoot', 'Vue+Echarts',]; // 文字轮播队列
         cvs = null; // 粒子画布
         cvsCtx = null; // 粒子画布绘图上下文
         textCvs = null; // 文本画布
@@ -322,32 +322,32 @@ export default {
           }
 
           // 一段时间后自动散开
-          if(g==true){
+          if (g == true) {
             this._spreadTimer = setTimeout(() => {
-            const color = this.randomColor;
-            for (let i = 0; i < particles.length; i++) {
-              particles[i].update({
-                random: true,
-                delay: this.randomDelay,
-                duration: this.randomDuration,
-                color,
-                alpha: this.randomAlpha,
-              });
-            }
-
-            setTimeout(() => {
-              this._spreadTimer = null;
-              if (this.text.length === 1) {
-                 g = false
-                //this.text.push(this.randomText);
+              const color = this.randomColor;
+              for (let i = 0; i < particles.length; i++) {
+                particles[i].update({
+                  random: true,
+                  delay: this.randomDelay,
+                  duration: this.randomDuration,
+                  color,
+                  alpha: this.randomAlpha,
+                });
               }
-              this._update();
-            }, 700);
-          }, 2000);
+
+              setTimeout(() => {
+                this._spreadTimer = null;
+                if (this.text.length === 1) {
+                  g = false
+                  //this.text.push(this.randomText);
+                }
+                this._update();
+              }, 700);
+            }, 2000);
           }
-          
+
         }
-      
+
         _onEnterFrame() {
           const { particles, cvs, cvsCtx } = this;
           cvsCtx.clearRect(0, 0, cvs.width, cvs.height);
@@ -423,31 +423,31 @@ export default {
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation-name:bottonChange;
-	animation-timing-function:ease-in-out;
-  -webkit-animation-duration:15s;
+  /* animation-name: bottonChange;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 15s; */
 }
-@-webkit-keyframes bottonChange{
-	0% {  
+@-webkit-keyframes bottonChange {
+  0% {
     opacity: 0;
-        display: none;
-    }
-    98% {
-      opacity: 0;
-      display: none;
-	}
-    100% {
-      display: block;
-        opacity: 1;
-        transition: 1s;
-	}
- }
+    display: none;
+  }
+  98% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    transition: 1s;
+  }
+}
 .button {
   padding: 0.75em 2em;
   text-align: center;
   text-decoration: none;
-  color: #2194E0;
-  border: 2px solid #2194E0;
+  color: #2194e0;
+  border: 2px solid #2194e0;
   font-size: 24px;
   display: inline-block;
   border-radius: 0.3em;
@@ -456,26 +456,26 @@ export default {
   overflow: hidden;
 }
 .button:before {
-    content: "";
-    background-color: rgba(255,255,255,0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -4.3em;
-    transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-  .button:hover {
-    background-color:  #27395c;
-    color: #fff;
-    border-bottom: 4px solid darken(#2194E0, 10%);
-  }
-  .button:hover:before {
-      transform: skewX(-45deg) translateX(13.5em);
-     transition: all 0.5s ease-in-out;
-    }
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.3em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+.button:hover {
+  background-color: #27395c;
+  color: #fff;
+  border-bottom: 4px solid darken(#2194e0, 10%);
+}
+.button:hover:before {
+  transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
+}
 #app {
   position: relative;
   width: 100%;
@@ -495,7 +495,7 @@ body {
 #cvs {
   width: 100%;
   height: 100%;
-  
+
   /* background-image: url(../../assets/img/image.jpg); */
   /* background-image: url(../../assets/img/bj1.png); */
   /* background-image: url(../../assets/img/bj1.png); */
