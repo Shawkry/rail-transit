@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0a422b"],{"04c4":function(a,e,n){"use strict";n.r(e);var c=function(){var a=this,e=a.$createElement,n=a._self._c||e;return n("div",{staticClass:"com-page"},[n("is-map")],1)},s=[],t=n("a2da"),p={name:"MapPage",components:{isMap:t["a"]}},i=p,o=n("2877"),u=Object(o["a"])(i,c,s,!1,null,"a38ce944",null);e["default"]=u.exports}}]);
-//# sourceMappingURL=chunk-2d0a422b.48cca4fd.js.map
