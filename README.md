@@ -10,7 +10,7 @@
 
 http://www.shawkry.top/rail-transport
 
-### 技术简介
+## 技术简介
 
 技术栈：Vue2 + ElementUI + ECharts
 
